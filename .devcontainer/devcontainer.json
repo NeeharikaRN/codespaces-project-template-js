@@ -2,7 +2,7 @@
 // https://github.com/devcontainers/images/tree/main/src/javascript-node
 {
   "name": "JavaScript Portfolio Site with GitHub Codespaces",
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
   "hostRequirements": {
     "cpus": 4
   },
@@ -12,7 +12,7 @@
   "postAttachCommand": {
     "server": "npm start"
   },
-
+ 
   // Configure tool-specific properties.
   "customizations": {
     // Configure properties specific to VS Code.
@@ -21,9 +21,7 @@
       "extensions": [
         "dbaeumer.vscode-eslint",
         "esbenp.prettier-vscode",
-        "GitHub.copilot",
-        "ms-vscode.azure-account",
-        "ms-azuretools.vscode-azurestaticwebapps"
+        "GitHub.copilot"
       ],
       "settings": {
         "emmet.includeLanguages": {
@@ -33,18 +31,17 @@
       }
     }
   },
-
+ 
   "features": {
-    "ghcr.io/devcontainers/features/github-cli:1": {},
-    "ghcr.io/devcontainers/features/azure-cli:1": {}
+    "ghcr.io/devcontainers/features/github-cli:1": {}
   },
-
+ 
   "portsAttributes": {
     "1234": {
       "label": "Application",
       "onAutoForward": "openPreview"
     }
   },
-
+ 
   "forwardPorts": [1234]
 }
